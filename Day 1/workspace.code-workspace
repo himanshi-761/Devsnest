@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\Downloads\\Turbo.C.3.2\\Turbo.C.3.2\\WinRoot\\TURBOC3"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"python.pythonPath": "python3.6"
+	}
+}
