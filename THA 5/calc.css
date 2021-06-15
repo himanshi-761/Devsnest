@@ -1,0 +1,14 @@
+.button {
+    background-color: aqua;
+    text-align: center;
+    font-size: large;
+}
+
+#submit {
+    font-size: large;
+    text-align: center;
+}
+
+.size {
+    font-size: 20px;
+}
