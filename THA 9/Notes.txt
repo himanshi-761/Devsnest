@@ -1,0 +1,192 @@
+const newWindow = window.open()
+
+It will open a separate window in the browser which will 
+help in browse through all the elements of the page and it's 
+components and function
+
+newWindow.close()
+It closes that function
+
+window 
+In the terminal will open the elements and we can change
+it's component 
+for eg. newWindow.location("www.google.com")
+will change it's URL
+
+If we try extracting the data from window 
+for eg. newWindow.document.getElementByTagName('div')
+we may or may not get it's elements due to security features
+
+
+The variable declared in the global scope becomes property of 
+window and function created becomes a method 
+
+console.log(Window)
+console.log(this)
+ Both function will show same result as Window
+
+If we log 'this' in any object then it will print the object
+for eg.
+const server = {
+    serverName: "Devnest",
+    getInvite : function(){
+        console.log("discord.gg/" + serverName);
+    }
+}
+server.getInvite()
+// it will print an error because if a function is in object it cannot 
+//dirctly access it here comes the role of 'this' keyword
+
+const server = {
+    serverName: "Devnest",
+    getInvite : function(){
+        console.log(this.serverName)//It can access the serverName now 
+        //without any error 
+        //console.log("discord.gg/" + serverName);
+    }
+}
+server.getInvite()
+// prints the server object
+
+
+If 'this' is inside any object then it prints the object
+
+var a = 10;
+function ab(){
+    var a = 20;
+    console.log(a);//prints 20
+    console.log(this.a);//Prints 10
+}
+ab()
+
+this always depend upon the global variable It does not change according 
+to changes in local
+
+
+CALL
+The function called may or maynot be in the scope of object
+for eg. :
+const server = {
+    serverName = "DSC",
+    getInvite : function() {
+        console.log("Random" + this.serverName);
+    }
+}
+
+const server2 = {
+    serverName = "Developer",
+    /*getInvite : function() {
+        console.log("Random" + this.serverName);
+    }*/
+}
+//If we have to access getInvite function for any object instead of writing many 
+//times we will simply use call function
+server2.getInvite.call()
+//Output :
+//Random Developer
+server.getInvite();
+//Output:
+//Random DSC
+server.getInvite.call();
+//Output:
+//Random Undefined
+server.getInvite.call(server2);
+//Output:
+//Random Developer
+
+
+APPLY 
+same as call but we need to pass all the argument in the form of array
+The function called may or maynot be in the scope of object
+for eg:
+const server = {
+    serverName = "DSC",
+    getInvite : function(a,b) {
+        console.log("Random" + this.serverName);
+        console.log(a+b)
+    }
+}
+
+const server2 = {
+    serverName = "Developer"
+}
+server.getInvite.apply(server2,[1,2])
+//Output:
+//Random Developer
+//3
+
+BIND
+It returns the function being called
+The function called may or maynot be in the scope of object 
+for eg:
+const server = {
+    serverName = "DSC",
+    getInvite : function(a,b) {
+        console.log("Random" + this.serverName);
+        console.log(a + b)
+    }
+}
+
+const server2 = {
+    serverName = "Developer",
+    
+}
+const ab = server.getInvite.bind(server2, 1, 2);
+ab()
+//Output:
+//Random Developer 
+//3
+
+
+Random Javascript 
+console.log(a)  //execution: 
+                //window: global object
+var a  = 10;    //this: window
+                //a: undefined 
+//Output:
+//Undefined
+
+
+
+ab()
+function ab(){
+    console.log(10);
+}
+
+//Output:
+//10
+
+
+
+ab();
+
+const ab = () => {
+    console.log(ab);
+}
+//Error: Cannot access ab before initialization
+
+VARIABLE are partially hoist whereas 
+FUNCTION are completely hoist
+
+
+SPREAD OPERATOR
+var a = [1, 2, 3, 4]
+var b = a;
+b.push(5);
+//It pushes the value in both a and b
+console.log(a);
+console.log(b);
+
+Here comes the use of spread opeartor
+var a = [1, 2, 3, 4]
+var b = [...a];
+b.push(5);
+//It pushes the value in only b
+console.log(a);
+console.log(b);
+
+
+const getSum = (...arr){
+    console.log(arr);//Prints the argument in form of array 
+}
+getSum(2,3,4,5);

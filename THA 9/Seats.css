@@ -1,0 +1,51 @@
+.boxcontainer {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-color: brown;
+    width: 100%;
+    height: 100%;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    background-color: black;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.boxcontainer:hover {
+    opacity: 0.8;
+}
+
+.boxclicked {
+    color: rgb(77, 7, 7);
+}
