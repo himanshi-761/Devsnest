@@ -2,12 +2,11 @@ const box = document.querySelector(".boxcontainer");
 for (var i = 0; i < 100; i++) {
     let a = document.createElement('div');
     a.classList.add("inner");
+    a.classList.add("box");
     box.appendChild(a);
 }
-box.addEventListener(click, () => {
-    if (box.classList.contains('.boxclicked')) {
-        box.classList.remove('.boxclicked')
-    } else {
-        box.classList.add('boxclicked');
-    }
-})
+const v = document.querySelector(".inner");
+v.forEach((inner) =>
+    a.addEventListener(click, () => {
+        a.classList.toggle('.boxclicked');
+    }))
