@@ -1,0 +1,13 @@
+* in CSS used for applying CSS in all the elements
+
+transition: all 0.5;  apply transition propety in all fragments.
+
+Perspective  in CSS means the sight(or point) of view 
+from the viewer i.e to create a 3D effect The more the pixels
+less will be distance of the viewer.
+
+Perspective and transform-style : preserve 3D go hand in hand
+
+backface-visiblity : hidden;
+
+glassmorphism for getting CSS code for blur 
