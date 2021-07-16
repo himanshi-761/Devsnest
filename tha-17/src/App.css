@@ -1,0 +1,33 @@
+/* * { *    box-sizing: border-box;
+ */
+
+.container {
+    box-shadow: rgb(85, 82, 82) 2px;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    text-align: center;
+    background-color: indianred;
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.ki {
+    text-align: left;
+}
+
+.box {
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px block;
+    color: rgb(9, 58, 9);
+    display: inline-block;
+    box-shadow: 20px rgb(238, 12, 12);
+    text-align: center;
+    /* max-height: 100px; */
+    max-width: 500px;
+    /* top: 20px; */
+    /* bottom: 50px; */
+}
