@@ -17,7 +17,7 @@ return(
   <button className = "btn" onClick = {() => setRight("East")}> {right} </button>
   <button onClick = {() => {setAbove("above Arrow"); setBelow("Below arrow"); setLeft("Left Arrow"); setRight("Right Arrow");}}>  RESET  </button>
   </div>
-
+ 
 );
 }
 export default App;
